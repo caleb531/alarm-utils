@@ -1,0 +1,32 @@
+[
+  {
+    "time": "7:30am",
+    "label": "Early Wake-Up Time",
+    "repeat": ["mon", "tue", "wed", "thu", "fri"],
+    "enabled": false
+  },
+  {
+    "time": "7:40am",
+    "label": "Early Get-Up Time",
+    "repeat": ["mon", "tue", "wed", "thu", "fri"],
+    "enabled": false
+  },
+  {
+    "time": "8:10am",
+    "label": "Church Wake-Up Time",
+    "repeat": ["sun"],
+    "enabled": true
+  },
+  {
+    "time": "8:20am",
+    "label": "Church Get-Up Time",
+    "repeat": ["sun"],
+    "enabled": true
+  },
+  {
+    "time": "3:30pm",
+    "label": "Dinner Time",
+    "enabled": true,
+    "repeat": ["sat"]
+  }
+]
