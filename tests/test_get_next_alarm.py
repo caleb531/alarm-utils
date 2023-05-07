@@ -5,7 +5,7 @@ import unittest
 from freezegun import freeze_time
 
 from alarmutils.alarm import Alarm
-from alarmutils.get_next_alarm import get_next_alarm
+from alarmutils.get_next_alarm import get_next_alarm, NextAlarmRingTimeNotFound
 
 
 class TestGetNextAlarm(unittest.TestCase):
@@ -95,6 +95,16 @@ class TestGetNextAlarm(unittest.TestCase):
             ],
             next_alarm_index=0
         )
+
+    def test_logical_error(self) -> None:
+        """Should raise error if no enabled alarms """
+        with self.assertRaises(NextAlarmRingTimeNotFound):
+            self.assert_next_alarm(
+                alarms=[
+                    Alarm(time='8:00am', enabled=True, repeat=['xyz'])
+                ],
+                next_alarm_index=0
+            )
 
 
 if __name__ == '__main__':
