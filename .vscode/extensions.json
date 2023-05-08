@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "kevinglasson.cornflakes-linter",
+    "ms-python.black-formatter"
+  ]
+}

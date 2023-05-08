@@ -5,19 +5,18 @@ from datetime import datetime, time
 from typing import Literal, Optional, Union
 
 WeekdayT = Union[
-    Literal['sun'],
-    Literal['mon'],
-    Literal['tue'],
-    Literal['wed'],
-    Literal['thu'],
-    Literal['fri'],
-    Literal['sat']
+    Literal["sun"],
+    Literal["mon"],
+    Literal["tue"],
+    Literal["wed"],
+    Literal["thu"],
+    Literal["fri"],
+    Literal["sat"],
 ]
 
 
 @dataclass
 class Alarm(object):
-
     label: str
     time: time
     enabled: bool
@@ -28,10 +27,10 @@ class Alarm(object):
         *,
         time: str,
         enabled: bool,
-        label: str = 'Alarm',
+        label: str = "Alarm",
         repeat: list[WeekdayT] = None
     ) -> None:
-        self.time = datetime.strptime(time, '%I:%M%p').time()
+        self.time = datetime.strptime(time, "%I:%M%p").time()
         self.enabled = enabled
         self.label = label
         self.repeat = repeat
