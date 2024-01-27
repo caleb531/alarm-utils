@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "EditorConfig.EditorConfig",
-    "kevinglasson.cornflakes-linter",
+    "ms-python.flake8",
     "ms-python.black-formatter"
   ]
 }
