@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
+import datetime
 from dataclasses import dataclass
-from datetime import datetime, time
 from typing import Literal, Optional, Union
 
 WeekdayT = Union[
@@ -18,7 +18,7 @@ WeekdayT = Union[
 @dataclass
 class Alarm(object):
     label: str
-    time: time
+    time: datetime.time
     enabled: bool
     repeat: Optional[list[WeekdayT]]
 
@@ -30,7 +30,7 @@ class Alarm(object):
         label: str = "Alarm",
         repeat: list[WeekdayT] = None
     ) -> None:
-        self.time = datetime.strptime(time, "%I:%M%p").time()
+        self.time = datetime.datetime.strptime(time, "%I:%M%p").time()
         self.enabled = enabled
         self.label = label
         self.repeat = repeat
