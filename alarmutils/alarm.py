@@ -28,7 +28,7 @@ class Alarm(object):
         time: str,
         enabled: bool,
         label: str = "Alarm",
-        repeat: list[WeekdayT] = None
+        repeat: list[WeekdayT] = None,
     ) -> None:
         self.time = datetime.datetime.strptime(time, "%I:%M%p").time()
         self.enabled = enabled
