@@ -1,3 +1,0 @@
-# Bring flake8's max line length rule in sync with black's, which is 88
-[flake8]
-max-line-length=88
